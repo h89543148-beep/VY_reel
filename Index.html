@@ -37,38 +37,11 @@
     <!-- मेन लॉजिक: Supabase चेकर + रीडायरेक्ट -->
     <script src="config/supabase.js" type="module"></script>
     
-    <script type="module">
-        import { supabase } from './config/supabase.js';
-
-        async function checkUserAndRedirect() {
-            try {
-                // Supabase से पूछो: "कोई लॉग इन है क्या?"
-                const { data: { user }, error } = await supabase.auth.getUser();
-
-                if (error) {
-                    console.error("Auth Check Error:", error);
-                    // एरर आया तो Login Page पर भेजो
-                    window.location.href = 'login/login.html';
-                    return;
-                }
-
-                if (user) {
-                    // ✅ यूजर लॉग इन है → Home Dashboard पर भेजो
-                    console.log("✅ User logged in:", user.email);
-                    window.location.href = 'home/home.html';
-                } else {
-                    // ❌ कोई नहीं है → Login Page पर भेजो
-                    console.log("❌ No user found. Redirecting to Login.");
-                    window.location.href = 'login/login.html';
-                }
-            } catch (err) {
-                console.error("Unexpected Error:", err);
-                window.location.href = 'login/login.html';
-            }
-        }
-
-        // पेज लोड होते ही चेक शुरू
-        checkUserAndRedirect();
+    <script>
+    // 2 सेकंड बाद सीधे Login Page पर ले जाओ
+    setTimeout(function() {
+        window.location.href = 'login/login.html';
+    }, 2000);
     </script>
 
 </body>
