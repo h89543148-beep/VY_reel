@@ -1,0 +1,20 @@
+/* Forgot Password Specific Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#resetMsg.success {
+    color: #10B981;
+}
+
+#resetMsg.error {
+    color: #EF4444;
+}
+
+#resetMsg.info {
+    color: #00F5FF;
+}

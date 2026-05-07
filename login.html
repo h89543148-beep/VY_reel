@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VY-Reel - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+</head>
+<body>
+
+    <div class="auth-box">
+        <h1>🎬 VY-Reel</h1>
+        <p>लॉग इन करो और दुनिया को दिखाओ</p>
+
+        <input type="email" id="loginEmail" placeholder="ईमेल">
+        <input type="password" id="loginPassword" placeholder="पासवर्ड">
+        <p style="text-align: right; margin-top: -5px; margin-bottom: 15px;">
+    <a href="../forgot/forgot.html" style="color: #9CA3AF; font-size: 13px; text-decoration: none;">
+        पासवर्ड भूल गए?
+    </a>
+</p>
+
+        <button class="btn-primary" id="loginBtn">लॉग इन करो</button>
+        <div id="loginMsg" style="margin-top: 15px; font-size: 14px;"></div>
+        
+        <p class="switch-text">
+            अकाउंट नहीं है? 
+            <a href="../signup/signup.html">साइन अप करो</a>
+        </p>
+    </div>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>

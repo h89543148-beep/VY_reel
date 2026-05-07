@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VY-Reel | होम</title>
+
+    <!-- ग्लोबल स्टाइल्स (पूरे ऐप का बेस डिज़ाइन) -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- होम पेज की अपनी स्टाइल्स -->
+    <link rel="stylesheet" href="home.css">
+    <!-- प्रोफेशनल आइकॉन्स -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== मेन होम डैशबोर्ड ========== -->
+    <div class="home-dashboard">
+
+        <!-- 1. टॉप हेडर -->
+        <header class="dashboard-header">
+            <h1 class="logo">🎬 VY-Reel</h1>
+            <div class="header-icons">
+                <i class="fas fa-search" title="सर्च"></i>
+                <i class="fas fa-bell" title="नोटिफिकेशंस"></i>
+            </div>
+        </header>
+
+        <!-- 2. मेन कंटेंट एरिया (अभी खाली फीड दिखाएगा) -->
+        <main class="feed-preview">
+            <div class="empty-feed">
+                <i class="fas fa-film"></i>
+                <h2>अभी तक कोई रील नहीं है!</h2>
+                <p>नीचे दिए गए ➕ बटन से अपनी पहली रील बनाओ और इस दुनिया को दिखाओ।</p>
+            </div>
+        </main>
+
+        <!-- 3. नीचे का नेविगेशन बार (Footer Menu) -->
+        <nav class="bottom-nav">
+            <!-- होम (अभी एक्टिव है) -->
+            <a href="home.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>होम</span>
+            </a>
+            <!-- फीड/रील्स पेज -->
+            <a href="../feed/feed.html" class="nav-item">
+                <i class="fas fa-play-circle"></i>
+                <span>रील्स</span>
+            </a>
+            <!-- रील अपलोड करने का बड़ा बटन -->
+            <a href="../upload/upload.html" class="nav-item upload-btn">
+                <i class="fas fa-plus-circle"></i>
+            </a>
+            <!-- लाइक्स (अभी के लिए खाली) -->
+            <a href="#" class="nav-item" onclick="alert('जल्द आ रहा है!')">
+                <i class="fas fa-heart"></i>
+                <span>लाइक्स</span>
+            </a>
+            <!-- प्रोफाइल पेज -->
+            <a href="../profile/profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>प्रोफाइल</span>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- होम पेज का अपना लॉजिक (JS) -->
+    <script src="../config/supabase.js" type="module"></script>
+    <script src="home.js" type="module"></script>
+</body>
+</html>

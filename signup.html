@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VY-Reel - Signup</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
+</head>
+<body>
+
+    <div class="auth-box">
+        <h1>🎬 VY-Reel</h1>
+        <p>नया अकाउंट बनाओ और दुनिया को दिखाओ</p>
+
+        <input type="text" id="signupName" placeholder="पूरा नाम">
+        <input type="email" id="signupEmail" placeholder="ईमेल">
+        <input type="password" id="signupPassword" placeholder="पासवर्ड (कम से कम 6 अक्षर)">
+        <input type="password" id="signupConfirm" placeholder="पासवर्ड दोबारा लिखें">
+
+        <button class="btn-primary" id="signupBtn">अकाउंट बनाओ 🚀</button>
+
+        <div id="signupMsg" style="margin-top: 15px; font-size: 14px;"></div>
+
+        <p class="switch-text">
+            पहले से अकाउंट है? 
+            <a href="../login/login.html">लॉग इन करो</a>
+        </p>
+    </div>
+
+    <script src="signup.js" type="module"></script>
+</body>
+</html>

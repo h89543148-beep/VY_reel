@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VY-Reel | तेरी रील, तेरा राज</title>
+
+    <!-- 1. ग्लोबल स्टाइल्स (पूरे ऐप का डिज़ाइन) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 2. Font Awesome 6 आइकॉन (प्रोफेशनल लुक के लिए) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- 3. Google Fonts (Poppins + Inter - मॉडर्न टच) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- 
+        ==============================================
+        ये सिर्फ एक राउटर (दरवाज़ा) है।
+        इसका काम सिर्फ ये चेक करना है कि यूजर ने लॉग इन किया है या नहीं।
+        ==============================================
+    -->
+
+    <!-- लोडिंग स्क्रीन (जब तक चेक होता है) -->
+    <div id="loadingScreen" style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #0D0D0D; color: white; font-family: 'Inter', sans-serif;">
+        <div style="text-align: center;">
+            <h1 style="color: #8B5CF6; font-size: 32px;">🎬 VY-Reel</h1>
+            <p style="color: #9CA3AF; margin-top: 10px;">लोड हो रहा है...</p>
+        </div>
+    </div>
+
+    <!-- मेन लॉजिक: Supabase चेकर + रीडायरेक्ट -->
+    <script src="config/supabase.js" type="module"></script>
+    
+    <script type="module">
+        import { supabase } from './config/supabase.js';
+
+        async function checkUserAndRedirect() {
+            try {
+                // Supabase से पूछो: "कोई लॉग इन है क्या?"
+                const { data: { user }, error } = await supabase.auth.getUser();
+
+                if (error) {
+                    console.error("Auth Check Error:", error);
+                    // एरर आया तो Login Page पर भेजो
+                    window.location.href = 'login/login.html';
+                    return;
+                }
+
+                if (user) {
+                    // ✅ यूजर लॉग इन है → Home Dashboard पर भेजो
+                    console.log("✅ User logged in:", user.email);
+                    window.location.href = 'home/home.html';
+                } else {
+                    // ❌ कोई नहीं है → Login Page पर भेजो
+                    console.log("❌ No user found. Redirecting to Login.");
+                    window.location.href = 'login/login.html';
+                }
+            } catch (err) {
+                console.error("Unexpected Error:", err);
+                window.location.href = 'login/login.html';
+            }
+        }
+
+        // पेज लोड होते ही चेक शुरू
+        checkUserAndRedirect();
+    </script>
+
+</body>
+</html>

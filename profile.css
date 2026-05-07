@@ -1,0 +1,13 @@
+.profile-container { background: #0D0D0D; min-height: 100vh; color: white; }
+.profile-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #1a1a1a; }
+.profile-header h2 { font-size: 18px; }
+.profile-header i { font-size: 20px; cursor: pointer; }
+.user-info { text-align: center; padding: 30px 20px; }
+.avatar { font-size: 60px; margin-bottom: 15px; }
+.user-info h3 { color: #8B5CF6; font-size: 22px; margin-bottom: 5px; }
+.user-info p { color: #9CA3AF; font-size: 14px; margin-bottom: 20px; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 30px; }
+.stats div { text-align: center; }
+.stats strong { display: block; font-size: 20px; color: white; }
+.stats span { font-size: 12px; color: #9CA3AF; }
+.btn-logout { background: transparent; border: 1px solid #EF4444; color: #EF4444; padding: 15px 40px; border-radius: 50px; font-size: 16px; cursor: pointer; }

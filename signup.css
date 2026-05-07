@@ -1,0 +1,18 @@
+/* Signup Page Specific Styles */
+/* Global styles ../style.css से आ रही हैं */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#signupMsg.success {
+    color: #10B981;
+}
+
+#signupMsg.error {
+    color: #EF4444;
+}

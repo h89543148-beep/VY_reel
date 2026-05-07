@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VY-Reel | प्रोफाइल</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <i class="fas fa-arrow-left" onclick="history.back()"></i>
+            <h2>प्रोफाइल</h2>
+            <i class="fas fa-cog"></i>
+        </header>
+
+        <div class="user-info">
+            <div class="avatar">👤</div>
+            <h3 id="displayName">लोड हो रहा है...</h3>
+            <p id="userEmail">example@email.com</p>
+            <div class="stats">
+                <div><strong>0</strong><span>Reel</span></div>
+                <div><strong>0</strong><span>TOOYP</span></div>
+                <div><strong>0</strong><span>ROOYT</span></div>
+            </div>
+            <button class="btn-logout">लॉग आउट</button>
+        </div>
+    </div>
+
+    <script src="../config/supabase.js" type="module"></script>
+    <script src="profile.js" type="module"></script>
+</body>
+</html>

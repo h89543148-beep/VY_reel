@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VY-Reel | रील अपलोड करो</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="upload-container">
+        <header class="upload-header">
+            <i class="fas fa-arrow-left" onclick="history.back()"></i>
+            <h2>रील अपलोड करो</h2>
+            <i class="fas fa-check" id="publishBtn"></i>
+        </header>
+
+        <div class="upload-area" id="dropZone">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h3>वीडियो चुनने के लिए टैप करो</h3>
+            <p>MP4, MOV, AVI (Max 100MB)</p>
+            <input type="file" id="fileInput" accept="video/*" hidden>
+        </div>
+
+        <div id="previewContainer" class="hidden">
+            <video id="videoPreview" controls></video>
+        </div>
+
+        <div id="uploadProgress" class="hidden">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p id="progressText">0%</p>
+        </div>
+
+        <input type="text" id="captionInput" class="caption-input" placeholder="अपनी रील के लिए कैप्शन लिखो...">
+    </div>
+
+    <script src="../config/supabase.js" type="module"></script>
+    <script src="upload.js" type="module"></script>
+</body>
+</html>

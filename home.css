@@ -1,0 +1,126 @@
+/* =============================== */
+/* VY-REEL HOME DASHBOARD STYLES   */
+/* =============================== */
+
+.home-dashboard {
+    background: #0D0D0D;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px; /* नीचे की नेविगेशन बार के लिए जगह */
+}
+
+/* 1. टॉप हेडर */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0D0D0D;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #8B5CF6;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 2. मेन कंटेंट (खाली फीड) */
+.feed-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.empty-feed {
+    text-align: center;
+    color: white;
+}
+
+.empty-feed i {
+    font-size: 60px;
+    color: #8B5CF6;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.empty-feed h2 {
+    color: #8B5CF6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.empty-feed p {
+    color: #9CA3AF;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 3. नीचे का नेविगेशन बार */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 12px 0;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9CA3AF;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: #8B5CF6;
+}
+
+/* रील अपलोड का बड़ा बटन */
+.upload-btn {
+    position: relative;
+    top: -15px;
+}
+
+.upload-btn i {
+    font-size: 45px;
+    color: #8B5CF6;
+    background: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+    transition: 0.3s;
+}
+
+.upload-btn i:hover {
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
