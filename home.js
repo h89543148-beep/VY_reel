@@ -1,15 +1,19 @@
-import { supabase } from '../config/supabase.js'
+import { checkUser, logout } from '../../app.js';
 
-async function checkUser() {
-    const { data: { user }, error } = await supabase.auth.getUser()
-
-    if (error || !user) {
-        // यूजर लॉग इन नहीं है → वापस Login Page पर भेजो
-        window.location.href = '../login/login.html'
-    } else {
-        console.log('✅ VY-Reel Home: Welcome,', user.email)
+async function loadHome() {
+    const user = await checkUser();
+    
+    if (!user) {
+        window.location.href = '../login/login.html';
+        return;
     }
+    
+    console.log('✅ Welcome,', user.email);
+    document.getElementById('userName').textContent = user.email;
 }
 
-// पेज लोड होते ही चेक करो
-checkUser()
+document.getElementById('logoutBtn')?.addEventListener('click', async function() {
+    await logout();
+});
+
+loadHome();
