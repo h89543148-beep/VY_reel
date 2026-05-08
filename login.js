@@ -12,7 +12,7 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
         return;
     }
 
-    msgDiv.textContent = '⏳ लॉग इन हो रहा है...';
+    msgDiv.textContent = '⏳ लॉग इन हो रहा ...';
     msgDiv.className = 'info';
 
     try {
